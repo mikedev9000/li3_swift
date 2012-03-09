@@ -3,7 +3,7 @@
 use \lithium\core\Libraries;
 
 if (!defined('SWIFTMAILER_LIBRARY_PATH')) {
-	$path = '/swiftmailer/lib';
+	$path = 'swift/swiftmailer/lib';
 	$path = file_exists(LITHIUM_LIBRARY_PATH.$path) ?
 		LITHIUM_LIBRARY_PATH.$path :
 		LITHIUM_APP_PATH.'/libraries'.$path;
@@ -22,6 +22,17 @@ if (empty($library)) {
 		'prefix' => 'Swift_'
 	));
 }
+
+Transports::config(array('default' => array(
+    'adapter' => 'Smtp',
+    'host' => 'localhost',
+    //'port' => 465,
+    //'encryption' => 'tls',
+    //'username' => 'you@gmail.com',
+    //'password' => '#########',
+    //'domain' => 'your.server', // Used during the EHLO phase
+                                 // leave empty if unsure.
+)));
 
 # vim: ts=4 noet
 ?>
