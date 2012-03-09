@@ -1,6 +1,6 @@
 <?php
 
-namespace li3_swiftmailer\mailer;
+namespace swift\mailer;
 
 class Mailer extends \Swift_Mailer {
 }

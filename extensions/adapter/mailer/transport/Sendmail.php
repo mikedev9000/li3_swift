@@ -1,11 +1,11 @@
 <?php
 
-namespace li3_swiftmailer\extensions\adapter\mailer\transport;
+namespace swift\extensions\adapter\mailer\transport;
 
 /**
  * Transport relying on a command-line sendmail
  */
-class Sendmail extends \li3_swiftmailer\mailer\Transport
+class Sendmail extends \swift\mailer\Transport
 {
 	protected $config = array('command');
 

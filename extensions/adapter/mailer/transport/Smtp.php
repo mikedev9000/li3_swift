@@ -1,6 +1,6 @@
 <?php
 
-namespace li3_swiftmailer\extensions\adapter\mailer\transport;
+namespace swift\extensions\adapter\mailer\transport;
 
 /**
  * Transport relying on a SMTP server.
@@ -15,9 +15,9 @@ namespace li3_swiftmailer\extensions\adapter\mailer\transport;
  * - `'domain'` which domain is advertised while doing the EHLO phase
  *    (leave empty if unsure)
  *
- * @see li3_swiftmailer\mailer\Transport
+ * @see swift\mailer\Transport
  */
-class Smtp extends \li3_swiftmailer\mailer\Transport
+class Smtp extends \swift\mailer\Transport
 {
 	/**
 	 * The keys that are automagically configured.
@@ -34,7 +34,7 @@ class Smtp extends \li3_swiftmailer\mailer\Transport
 	/**
 	 * Do a special trick to set the localDomain using the domain key.
 	 *
-	 * @see li3_swiftmailer\mailer\Transport::_config()
+	 * @see swift\mailer\Transport::_config()
 	 */
 	protected function _config() {
 		parent::_config();

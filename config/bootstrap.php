@@ -3,7 +3,7 @@
 use \lithium\core\Libraries;
 
 if (!defined('SWIFTMAILER_LIBRARY_PATH')) {
-	$path = 'swift/swiftmailer/lib';
+	$path = '/swift/swiftmailer/lib';
 	$path = file_exists(LITHIUM_LIBRARY_PATH.$path) ?
 		LITHIUM_LIBRARY_PATH.$path :
 		LITHIUM_APP_PATH.'/libraries'.$path;
@@ -23,7 +23,8 @@ if (empty($library)) {
 	));
 }
 
-Transports::config(array('default' => array(
+
+\swift\mailer\Transports::config(array('default' => array(
     'adapter' => 'Smtp',
     'host' => 'localhost',
     //'port' => 465,

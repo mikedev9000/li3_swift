@@ -1,8 +1,8 @@
 <?php
 
-namespace li3_swiftmailer\tests\cases\mailer;
+namespace swift\tests\cases\mailer;
 
-use li3_swiftmailer\mailer\Transports;
+use swift\mailer\Transports;
 
 class TransportsTest extends \lithium\test\Unit {
 

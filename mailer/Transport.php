@@ -1,6 +1,6 @@
 <?php
 
-namespace li3_swiftmailer\mailer;
+namespace swift\mailer;
 
 /**
  * Generic transport adapter
@@ -20,7 +20,7 @@ abstract class Transport extends \lithium\core\Object {
 	protected function _init() {
 		$this->_classes += array(
 			'transport' => '\\Swift_MailTransport',
-			'mailer' => 'li3_swiftmailer\\mailer\\Mailer',
+			'mailer' => 'swift\\mailer\\Mailer',
 		);
 		return parent::_init();
 	}
